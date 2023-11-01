@@ -1,0 +1,200 @@
+{
+  "words": {
+    "Bơi": {
+      "audioPath": "audio/swimming.mp3",
+      "imagePath": "image/swimming.png",
+      "combinedWords": "Bơi lội: Swimming"
+    },
+    "Bới": {
+      "audioPath": "audio/digging.mp3",
+      "imagePath": "image/digging_soil.png",
+      "combinedWords": "Bới đất: Digging the soil"
+    },
+    "Bởi": {
+      "audioPath": "audio/because.mp3",
+      "imagePath": "image/because.png",
+      "combinedWords": "Bởi vì: Because"
+    },
+    "Bời": {
+      "audioPath": "",
+      "imagePath": "",
+      "combinedWords": "rối bời bời"
+    },
+    "Cơi": {
+      "audioPath": "path/to/audio/coi_coi_noi.mp3",
+      "imagePath": "path/to/image/coi_coi_noi.png",
+      "combinedWords": "Cơi nới: Expand, extend"
+    },
+    "cời": {
+      "audioPath": "path/to/audio/coi_coi_noi.mp3",
+      "imagePath": "path/to/image/coi_coi_noi.png",
+      "combinedWords": "cời than, cời lửa"
+    },
+    "Cởi": {
+      "audioPath": "path/to/audio/coi_coi_giay.mp3",
+      "imagePath": "path/to/image/coi_coi_giay.png",
+      "combinedWords": "Cởi giày: Take off the shoes"
+    },
+    "Chơi": {
+      "audioPath": "path/to/audio/choi_choi_dua.mp3",
+      "imagePath": "path/to/image/choi_choi_dua.png",
+      "combinedWords": "Chơi đùa: Play"
+    },
+    "Chới": {
+      "audioPath": "path/to/audio/choi_choi_voi.mp3",
+      "imagePath": "path/to/image/choi_choi_voi.png",
+      "combinedWords": "Chới với: (A phrase used to describe someone who is panicking or in a hurry)"
+    },
+    "Dơi": {
+      "audioPath": "path/to/audio/doi_con_doi.mp3",
+      "imagePath": "path/to/image/doi_con_doi.png",
+      "combinedWords": "Con dơi: Bat (the animal)"
+    },
+    "Dời": {
+      "audioPath": "path/to/audio/doi_doi_nha.mp3",
+      "imagePath": "path/to/image/doi_doi_nha.png",
+      "combinedWords": "Dời nhà: Move house"
+    },
+    "Đời": {
+      "audioPath": "path/to/audio/doi_cuoc_doi.mp3",
+      "imagePath": "path/to/image/doi_cuoc_doi.png",
+      "combinedWords": "Cuộc đời: Life"
+    },
+    "Đợi": {
+      "audioPath": "path/to/audio/doi_doi_cho.mp3",
+      "imagePath": "path/to/image/doi_doi_cho.png",
+      "combinedWords": "Đợi chờ: Wait"
+    },
+    "Giới": {
+      "audioPath": "path/to/audio/gioi_gioi_thieu.mp3",
+      "imagePath": "path/to/image/gioi_gioi_thieu.png",
+      "combinedWords": "Giới thiệu: Introduce"
+    },
+    "Giời": {
+      "audioPath": "path/to/audio/gioi_gioi_thieu.mp3",
+      "imagePath": "path/to/image/gioi_gioi_thieu.png",
+      "combinedWords": "ối giời ơi: oh my god"
+    },
+
+    "Hơi": {
+      "audioPath": "path/to/audio/hoi_hoi_nuoc.mp3",
+      "imagePath": "path/to/image/hoi_hoi_nuoc.png",
+      "combinedWords": "Hơi nước: Steam"
+    },
+    "Hợi": {
+      "audioPath": "path/to/audio/hoi_hoi_nuoc.mp3",
+      "imagePath": "path/to/image/hoi_hoi_nuoc.png",
+      "combinedWords": "Tuổi hợi, tuổi con heo"
+    },
+    "Hời": {
+      "audioPath": "path/to/audio/hoi_hoi_hot.mp3",
+      "imagePath": "path/to/image/hoi_hoi_hot.png",
+      "combinedWords": "Hời hợt: Indifferent"
+    },
+    "Hỡi": {
+      "audioPath": "path/to/audio/hoi_oi_hoi.mp3",
+      "imagePath": "path/to/image/hoi_oi_hoi.png",
+      "combinedWords": "Hỡi ơi! máy bay cất cánh rồi! Alas!"
+    },
+
+    "Khơi": {
+      "audioPath": "path/to/audio/khoi_khoi_nguon.mp3",
+      "imagePath": "path/to/image/khoi_khoi_nguon.png",
+      "combinedWords": "ra khơi, offshore, go, depart"
+    },
+
+    "Khởi": {
+      "audioPath": "path/to/audio/khoi_khoi_hanh.mp3",
+      "imagePath": "path/to/image/khoi_khoi_hanh.png",
+      "combinedWords": "Khởi hành: Depart"
+    },
+    "Lơi": {
+      "audioPath": "path/to/audio/loi_loi_long.mp3",
+      "imagePath": "path/to/image/loi_loi_long.png",
+      "combinedWords": "Lơi lỏng: Loose"
+    },
+    "Lời": {
+      "audioPath": "path/to/audio/loi_loi_noi.mp3",
+      "imagePath": "path/to/image/loi_loi_noi.png",
+      "combinedWords": "Lời nói: Words"
+    },
+    "Lợi": {
+      "audioPath": "path/to/audio/loi_loi_ich.mp3",
+      "imagePath": "path/to/image/loi_loi_ich.png",
+      "combinedWords": "Lợi ích: Benefit"
+    },
+    "Mới": {
+      "audioPath": "path/to/audio/moi_moi_me.mp3",
+      "imagePath": "path/to/image/moi_moi_me.png",
+      "combinedWords": "Mới mẻ: Fresh, new"
+    },
+    "Mời": {
+      "audioPath": "path/to/audio/moi_moi_ban.mp3",
+      "imagePath": "path/to/image/moi_moi_ban.png",
+      "combinedWords": "Mời bạn: Invite a friend"
+    },
+
+    "Nơi": {
+      "audioPath": "path/to/audio/noi_noi_day.mp3",
+      "imagePath": "path/to/image/noi_noi_day.png",
+      "combinedWords": "Nơi đây: Here"
+    },
+    "Nới": {
+      "audioPath": "path/to/audio/noi_noi_long.mp3",
+      "imagePath": "path/to/image/noi_noi_long.png",
+      "combinedWords": "Nới lỏng: Loosen"
+    },
+    "Ngơi": {
+      "audioPath": "path/to/audio/ngoi_ngoi_nghi.mp3",
+      "imagePath": "path/to/image/ngoi_ngoi_nghi.png",
+      "combinedWords": "Nghỉ ngơi nghỉ: Rest"
+    },
+    "Ngợi": {
+      "audioPath": "path/to/audio/ngoi_ngoi_khen.mp3",
+      "imagePath": "path/to/image/ngoi_ngoi_khen.png",
+      "combinedWords": "Ngợi khen: Praise"
+    },
+    "Rơi": {
+      "audioPath": "path/to/audio/roi_roi_rot.mp3",
+      "imagePath": "path/to/image/roi_roi_rot.png",
+      "combinedWords": "Lá rơi: Drop, fall"
+    },
+
+    "Rời": {
+      "audioPath": "path/to/audio/roi_roi_bo.mp3",
+      "imagePath": "path/to/image/roi_roi_bo.png",
+      "combinedWords": "Rời bỏ: Leave, depart"
+    },
+
+    "Sợi": {
+      "audioPath": "path/to/audio/soi_soi_chi.mp3",
+      "imagePath": "path/to/image/soi_soi_chi.png",
+      "combinedWords": "Sợi chỉ: Thread"
+    },
+    "Trời": {
+      "audioPath": "path/to/audio/troi_troi_oi.mp3",
+      "imagePath": "path/to/image/troi_troi_oi.png",
+      "combinedWords": "trời đất: heaven and earth"
+    },
+    "Với": {
+      "audioPath": "path/to/audio/voi_voi_tay.mp3",
+      "imagePath": "path/to/image/voi_voi_tay.png",
+      "combinedWords": "Với tay: Reach out with hand"
+    },
+    "Vời": {
+      "audioPath": "path/to/audio/voi_voi_voi.mp3",
+      "imagePath": "path/to/image/voi_voi_voi.png",
+      "combinedWords": "tuyệt vời: excellent"
+    },
+    "Xơi": {
+      "audioPath": "path/to/audio/xoi_xoi_nuoc.mp3",
+      "imagePath": "path/to/image/xoi_xoi_nuoc.png",
+      "combinedWords": "Xơi nước: Eat and drink"
+    },
+    "Xới": {
+      "audioPath": "path/to/audio/xoi_xoi_dat.mp3",
+      "imagePath": "path/to/image/xoi_xoi_dat.png",
+      "combinedWords": "Xới đất: Plough the soil"
+    }
+  }
+}

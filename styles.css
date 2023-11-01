@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7cdd93; /* Light background color */
+    font-family: 'Arial', sans-serif;
+}
+
+.output {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+#combinedWords {
+    font-size: 3em; /* Adjust as needed */
+    margin-bottom: 10px;
+    color: #2c3e50; /* Dark blue color */
+    font-weight: bold;
+}
+
+.squares {
+    display: flex;
+    flex-wrap: wrap; /* Allows squares to wrap to next line if needed */
+    justify-content: center; /* Centers the squares in the container */
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px; /* Vertically centers the text in the square */
+    background-color: #ecf0f1; /* Light blue color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.square:hover {
+    transform: translateY(-5px); /* Slightly lifts the square on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increased shadow on hover for depth */
+}
+
+.playBtn {
+    margin-top: 20px;
+    font-size: 1.5em;
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.playBtn:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+    transform: translateY(-3px); /* Slightly lifts the button on hover */
+}
+
+.playBtn:disabled {
+    background-color: #bdc3c7; /* Gray color */
+    color: #7f8c8d; /* Darker gray text */
+    cursor: not-allowed; /* Not-allowed cursor to indicate that the button is disabled */
+    transform: none; /* Remove transform to negate any hover effects */
+}
+
+.playBtn:disabled:hover {
+    background-color: #bdc3c7; /* Keep the background color the same on hover */
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+}
+.recordBtn {
+    margin-top: 20px;
+    font-size: 1.5em;
+    background-color: #e74c3c; /* Red color */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.recordBtn:hover {
+    background-color: #c0392b; /* Slightly darker red on hover */
+    transform: translateY(-3px); /* Slightly lifts the button on hover */
+}
+
+.recordBtn:disabled {
+    background-color: #bdc3c7; /* Gray color */
+    color: #7f8c8d; /* Darker gray text */
+    cursor: not-allowed; /* Not-allowed cursor to indicate that the button is disabled */
+    transform: none; /* Remove transform to negate any hover effects */
+}
+
+.recordBtn:disabled:hover {
+    background-color: #bdc3c7; /* Keep the background color the same on hover */
+}
+#countdown {
+    font-size: 2em;
+    color: #e74c3c;
+    margin-left: 10px;
+  }
+  
+
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #2a2929;
+    width: 50%;
+    text-align: center;
+}
+
+.modal-content button {
+    margin: 10px;
+    color: black;
+}
+
+
+
+.modal-content button:hover {
+    background-color: #e0e0e0;
+}
+
+#canvas1 {
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+.controls {
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.controls, select, option {
+    font-size: 25px;
+}

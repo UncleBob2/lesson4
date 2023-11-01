@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div id="permissionModal" class="modal">
+        <div class="modal-content">
+            <p>For the best experience, please allow the website to access microphone and play sounds?</p>
+            <button id="allowBtn">Allow</button>
+            <button id="denyBtn">Deny</button>
+        </div>
+    </div>
+    <div class="canvas-container">
+        <canvas id="canvas1"></canvas>
+    </div>
+    <div class="container">
+        <div class="output">
+            <p id="combinedWords"></p>
+            <img id="wordImage" src="" alt="" style="max-width: 500px; max-height: 500px;">
+        </div>
+        <div class="squares">
+            <select id="square1" class="square" onchange="checkCompletion()">
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="ch">ch</option>
+                <option value="d">d</option>
+                <option value="đ">đ</option>
+                <option value="gi">gi</option>
+                <option value="h">h</option>
+                <option value="kh">kh</option>
+                <option value="l">l</option>
+                <option value="m">m</option>
+                <option value="n">n</option>
+                <option value="ng">ng</option>
+                <option value="r">r</option>
+                <option value="s">s</option>
+                <option value="tr">tr</option>
+                <option value="v">v</option>
+                <option value="x">x</option>                
+            </select>
+            <select id="square2" class="square" onchange="checkCompletion()">
+                <option value="ơi">ơi</option>
+                <option value="ới">ới</option>
+                <option value="ời">ời</option>
+                <option value="ởi">ởi</option>
+                <option value="ỡi">ỡi</option>
+                <option value="ợi">ợi</option>
+            </select>
+        </div>
+        <div class="buttonContainer">
+            <button id="playBtn" class="playBtn" onclick="playAudio()" disabled>Play</button>
+            <button id="recordBtn" class="recordBtn" onclick="recordAudio()" disabled>Record</button>
+        </div>
+        <span id="countdown" style="display: none;">5</span>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>
