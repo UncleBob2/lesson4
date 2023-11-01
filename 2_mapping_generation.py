@@ -23,11 +23,22 @@ def generate_character_mapping(file_path):
 
 
 def get_initial_consonant(word):
-    compound_consonants = ["ch", "tr", "ng"]
-    initial = word[:2] if word[:2] in compound_consonants else word[0]
-    return initial.lower()
+    compound_consonants = ["ch", "tr", "ng", "gi", "kh"]
+    for consonant in compound_consonants:
+        if word.lower().startswith(consonant):
+            return consonant
+    return word[0].lower()
 
 
 file_path = "file.json"
 character_mapping = generate_character_mapping(file_path)
-print(json.dumps(character_mapping, indent=2, ensure_ascii=False))
+
+# Convert character_mapping to the desired JavaScript format
+js_output = "const characterMapping = {\n"
+for initial, words in character_mapping.items():
+    js_output += f'  "{initial}": {json.dumps(words, ensure_ascii=False)},\n'
+js_output = js_output.rstrip(",\n")  # Remove the trailing comma and newline
+js_output += "\n}"
+
+# Print the JavaScript output
+print(js_output)

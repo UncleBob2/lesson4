@@ -9,34 +9,24 @@ const RECORDING_TIME_IN_SECONDS = 8;
 let playerState = 'idle';
 
 
-const invalidCombinations = [
-  "bỡi", "cợi", "chời", "chỡi", "chợi", "dới", "dởi", "dỡi", "dợi", "đơi", "đởi", "đỡi", 
-  "giơi", "giởi", "giỡi", "giợi", "hới", "hởi",  "khới", "khời", "khỡi", "khợi", "lởi", 
-  "lỡi",  "mơi", "mởi", "mỡi", "mợi", "nời", "nởi", "nỡi", 
-  "nợi", "ngơi", "ngời", "ngởi", "ngỡi",  "rởi", "rỡi", 
-  "rợi", "sơi", "sời", "sỡi",  "trởi", "trỡi", 
-  "trợi", "vơi", "với", "vời", "vởi", "vỡi",  "xời", "xởi", 
-  "xỡi", "xợi"
-];
 
-
-const characterMapping={
-  "b": ["Bơi","Bới","Bởi","Bời"],
-  "c": ["Cơi","Cời","Cởi","Chơi","Chới"],
-  "d": ["Dơi","Dời"],
-  "đ": ["Đời","Đợi"],
-  "g": ["Giới","Giời"],
-  "h": ["Hơi","Hợi","Hời","Hỡi"],
-  "k": ["Khơi","Khởi"],
-  "l": ["Lơi","Lời","Lợi"],
-  "m": ["Mới","Mời"],
-  "n": ["Nơi","Nới","Ngơi","Ngợi"],
-  "r": ["Rơi","Rời"],
-  "s": ["Sợi"],
-  "t": ["Trời"],
-  "v": ["Với","Vời"],
-  "x": ["Xơi","Xới"]
+const characterMapping = {
+  "b": ["Bơi", "Bởi"],
+  "c": ["Cỡi", "Cởi"],
+  "ch": ["Chơi"],
+  "d": ["Dơi", "Dời"],
+  "đ": ["Đời", "Đợi"],
+  "gi": ["Giới"],
+  "tr": ["Trời"],
+  "kh": ["Khởi"],
+  "l": ["Lời", "Lợi"],
+  "m": ["Mới", "Mời"],
+  "ng": ["Ngơi", "Ngợi"],
+  "r": ["Rơi"],
+  "s": ["Sợi"]
 }
+    
+
 // Event listener for when the DOM content has loaded
 document.addEventListener('DOMContentLoaded', async () => {
   // Initialize event listeners for permission modal buttons
@@ -127,17 +117,17 @@ function getSelectedValues() {
 }
 
 // Check if the selected combination is complete and valid
+// Check if the selected combination is complete and valid
 function checkCompletion() {
   const selected = getSelectedValues();
   const selectedWords = characterMapping[selected.square1] || [];
   const selectedWord = selectedWords.find(word => word.endsWith(selected.square2));
-  const isInvalidCombination = invalidCombinations.includes(selectedWord + selected.square2);
   const isComplete = Object.values(selected).every(val => val);
 
   const playBtn = document.getElementById('playBtn');
   const recordBtn = document.getElementById('recordBtn');
 
-  const shouldBeEnabled = isComplete && !isInvalidCombination && selectedWord;
+  const shouldBeEnabled = isComplete && selectedWord;
   playBtn.disabled = !shouldBeEnabled;
   recordBtn.disabled = !shouldBeEnabled;
 
@@ -149,6 +139,7 @@ function checkCompletion() {
     updatePlayerState('idle');
   }
 }
+
 
 function getRandomState() {
   const states = ['idle', 'jump', 'fall', 'run', 'dizzy', 'sit', 'roll'];
