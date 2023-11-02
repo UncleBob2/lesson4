@@ -2,114 +2,114 @@
   "words": {
     "Bơi": {
       "audioPath": "audio/swimming.mp3",
-      "imagePath": "image/swimming2.png",
+      "imagePath": "image/swimming2.jpg",
       "combinedWords": "Bơi lội: Swimming - Em rất thích bơi lội vào mùa hè."
     },
 
     "Bởi": {
       "audioPath": "audio/because.mp3",
-      "imagePath": "image/because.png",
+      "imagePath": "image/because.jpg",
       "combinedWords": "Bởi vì: Because - Hôm nay em nghỉ học bởi vì em bị bệnh."
     },
 
     "Cỡi": {
       "audioPath": "path/to/audio/coi_coi_noi.mp3",
-      "imagePath": "image/horse_riding.png",
+      "imagePath": "image/horse_riding.jpg",
       "combinedWords": "Cỡi ngựa: horse riding - Em thấy chú cảnh sát cởi ngựa trên phố."
     },
 
     "Cởi": {
       "audioPath": "path/to/audio/coi_coi_giay.mp3",
-      "imagePath": "image/removeshoes.png",
+      "imagePath": "image/removeshoes.jpg",
       "combinedWords": "Cởi giày: Remove shoes - Phải cởi giày khi vào nhà."
     },
     "Chơi": {
       "audioPath": "path/to/audio/choi_choi_dua.mp3",
-      "imagePath": "path/to/image/choi_choi_dua.png",
+      "imagePath": "image/kids_playing.jpg",
       "combinedWords": "Chơi đùa: Play - các bạn nhỏ đang ngồi chơi đùa với nhau."
     },
 
     "Dơi": {
       "audioPath": "path/to/audio/doi_con_doi.mp3",
-      "imagePath": "image/bat.png",
+      "imagePath": "image/bat.jpg",
       "combinedWords": "Con dơi: Bat - Con dơi là loài động vật biết bay."
     },
     "Dời": {
       "audioPath": "path/to/audio/doi_doi_nha.mp3",
-      "imagePath": "path/to/image/doi_doi_nha.png",
+      "imagePath": "image/moving.jpeg",
       "combinedWords": "Dời nhà: Move house - Gia đình em sẽ dời nhà vào tháng sau."
     },
     "Đời": {
       "audioPath": "path/to/audio/doi_cuoc_doi.mp3",
-      "imagePath": "path/to/image/doi_cuoc_doi.png",
+      "imagePath": "image/life.jpeg",
       "combinedWords": "Cuộc đời: Life - Mẹ đã dành cả cuộc đời của mình để chăm lo dạy dỗ con nên người."
     },
     "Đợi": {
       "audioPath": "path/to/audio/doi_doi_cho.mp3",
-      "imagePath": "path/to/image/doi_doi_cho.png",
+      "imagePath": "image/wait.jpeg",
       "combinedWords": "Đợi chờ: Wait - chúng em đang chờ đợi xe bus."
     },
     "Giới": {
       "audioPath": "path/to/audio/gioi_gioi_thieu.mp3",
-      "imagePath": "image/everest.png",
+      "imagePath": "image/everest.jpg",
       "combinedWords": "Thế giới: World - Everest là ngọn núi cao nhất thế giới."
     },
 
 
     "Trời": {
       "audioPath": "path/to/audio/khoi_khoi_nguon.mp3",
-      "imagePath": "image/rainstorm.png",
+      "imagePath": "image/rainstorm.jpg",
       "combinedWords": "Trời mưa: Raining - Không nên ra ngoài trời mưa."
     },
 
     "Khởi": {
       "audioPath": "path/to/audio/khoi_khoi_hanh.mp3",
-      "imagePath": "path/to/image/khoi_khoi_hanh.png",
+      "imagePath": "image/ycc_airplane.jpeg",
       "combinedWords": "Khởi hành: Depart - Máy bay sẽ khởi hành đi Toronto vào lúc 8 giờ tối nay."
     },
 
     "Lời": {
       "audioPath": "path/to/audio/loi_loi_noi.mp3",
-      "imagePath": "image/free_advice.png",
+      "imagePath": "image/free_advice.jpg",
       "combinedWords": "Lời nói: Words - Lời nói chẳng mất tiền mua lựa lời mà nói cho vừa lòng nhau."
     },
     "Lợi": {
       "audioPath": "path/to/audio/loi_loi_ich.mp3",
-      "imagePath": "path/to/image/loi_loi_ich.png",
+      "imagePath": "image/reading.jpeg",
       "combinedWords": "Lợi ích: Benefit - Thói quen đọc sách mỗi ngày sẽ đem lại nhiều lợi ích cho bạn."
     },
     "Mới": {
       "audioPath": "path/to/audio/moi_moi_me.mp3",
-      "imagePath": "image/new_books.png",
+      "imagePath": "image/new_books.jpg",
       "combinedWords": "Sách mới: new - Mẹ mua cho em sách mới vào đầu năm học."
     },
     "Mời": {
       "audioPath": "path/to/audio/moi_moi_ban.mp3",
-      "imagePath": "path/to/image/moi_moi_ban.png",
+      "imagePath": "image/b_party.jpeg",
       "combinedWords": "Mời bạn: Invite friends - Em mời bạn đến nhà chơi vào dịp sinh nhật."
     },
 
 
     "Ngơi": {
       "audioPath": "path/to/audio/ngoi_ngoi_nghi.mp3",
-      "imagePath": "path/to/image/ngoi_ngoi_nghi.png",
+      "imagePath": "image/rest.png",
       "combinedWords": "Nghỉ ngơi: Rest - Bạn nên nghỉ ngơi khi thấy mệt mỏi."
     },
     "Ngợi": {
       "audioPath": "path/to/audio/ngoi_ngoi_khen.mp3",
-      "imagePath": "path/to/image/ngoi_ngoi_khen.png",
+      "imagePath": "image/trophy.jpeg",
       "combinedWords": "Ngợi khen: Praise - Anh hai học  giỏi nên được ba mẹ khen ngợi."
     },
     "Rơi": {
       "audioPath": "path/to/audio/roi_roi_rot.mp3",
-      "imagePath": "path/to/image/roi_roi_rot.png",
+      "imagePath": "image/fallingleaves.jpeg",
       "combinedWords": "Lá rơi: Drop/fall - Lá rơi rất nhiều vào mùa thu."
     },
 
 
     "Sợi": {
       "audioPath": "path/to/audio/soi_soi_chi.mp3",
-      "imagePath": "path/to/image/soi_soi_chi.png",
+      "imagePath": "image/necklace.jpg",
       "combinedWords": "Sợi dây: band/cord - mẹ mua cho em sợi dây chuyền rất đẹp."
     }
 
