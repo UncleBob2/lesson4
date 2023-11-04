@@ -36,17 +36,17 @@
     },
     "Dời": {
       "audioPath": "path/to/audio/doi_doi_nha.mp3",
-      "imagePath": "image/moving.jpeg",
+      "imagePath": "image/moving.jpg",
       "combinedWords": "Dời nhà: Move house - Gia đình em sẽ dời nhà vào tháng sau."
     },
     "Đời": {
       "audioPath": "path/to/audio/doi_cuoc_doi.mp3",
-      "imagePath": "image/life.jpeg",
+      "imagePath": "image/life.jpg",
       "combinedWords": "Cuộc đời: Life - Mẹ đã dành cả cuộc đời của mình để chăm lo dạy dỗ con nên người."
     },
     "Đợi": {
       "audioPath": "path/to/audio/doi_doi_cho.mp3",
-      "imagePath": "image/wait.jpeg",
+      "imagePath": "image/wait.jpg",
       "combinedWords": "Đợi chờ: Wait - chúng em đang chờ đợi xe bus."
     },
     "Giới": {
@@ -64,7 +64,7 @@
 
     "Khởi": {
       "audioPath": "path/to/audio/khoi_khoi_hanh.mp3",
-      "imagePath": "image/ycc_airplane.jpeg",
+      "imagePath": "image/ycc_airplane.jpg",
       "combinedWords": "Khởi hành: Depart - Máy bay sẽ khởi hành đi Toronto vào lúc 8 giờ tối nay."
     },
 
@@ -75,7 +75,7 @@
     },
     "Lợi": {
       "audioPath": "path/to/audio/loi_loi_ich.mp3",
-      "imagePath": "image/reading.jpeg",
+      "imagePath": "image/reading.jpg",
       "combinedWords": "Lợi ích: Benefit - Thói quen đọc sách mỗi ngày sẽ đem lại nhiều lợi ích cho bạn."
     },
     "Mới": {
@@ -85,7 +85,7 @@
     },
     "Mời": {
       "audioPath": "path/to/audio/moi_moi_ban.mp3",
-      "imagePath": "image/b_party.jpeg",
+      "imagePath": "image/b_party.jpg",
       "combinedWords": "Mời bạn: Invite friends - Em mời bạn đến nhà chơi vào dịp sinh nhật."
     },
 
@@ -97,12 +97,12 @@
     },
     "Ngợi": {
       "audioPath": "path/to/audio/ngoi_ngoi_khen.mp3",
-      "imagePath": "image/trophy.jpeg",
+      "imagePath": "image/trophy.jpg",
       "combinedWords": "Ngợi khen: Praise - Anh hai học  giỏi nên được ba mẹ khen ngợi."
     },
     "Rơi": {
       "audioPath": "path/to/audio/roi_roi_rot.mp3",
-      "imagePath": "image/fallingleaves.jpeg",
+      "imagePath": "image/fallingleaves.jpg",
       "combinedWords": "Lá rơi: Drop/fall - Lá rơi rất nhiều vào mùa thu."
     },
 

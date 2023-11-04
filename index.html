@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <div id="permissionModal" class="modal">
+    <div id="permissionModal" class="modal">
         <div class="modal-content">
             <p>For the best experience, please allow the website to access microphone and play sounds?</p>
             <button id="allowBtn">Allow</button>
@@ -17,14 +17,17 @@
     </div>
     <div class="canvas-container">
         <canvas id="canvas1"></canvas>
+        <canvas id="canvas3"></canvas>
     </div>
     <div class="container">
         <div class="output">
             <p id="combinedWords"></p>
-            <img id="wordImage" src="" alt="" style="max-width: 500px; max-height: 500px;">
+            <img id="wordImage" src="" alt="" style="max-width: 35vw; max-height: 35vw;">
         </div>
-        <div class="squares">
-            <select id="square1" class="square" onchange="checkCompletion()">
+        <!-- Combined controls and selects into buttonContainer -->
+        <div class="buttonContainer">
+            <!-- Removed squares div, selects go here -->
+            <select id="square1" class="square" >
                 <option value="b">b</option>
                 <option value="c">c</option>
                 <option value="ch">ch</option>
@@ -39,7 +42,7 @@
                 <option value="s">s</option>
                 <option value="tr">tr</option>           
             </select>
-            <select id="square2" class="square" onchange="checkCompletion()">
+            <select id="square2" class="square" >
                 <option value="ơi">ơi</option>
                 <option value="ới">ới</option>
                 <option value="ời">ời</option>
@@ -47,15 +50,19 @@
                 <option value="ỡi">ỡi</option>
                 <option value="ợi">ợi</option>
             </select>
-        </div>
-        <div class="buttonContainer">
-            <button id="playBtn" class="playBtn" onclick="playAudio()" disabled>Play</button>
-            <button id="recordBtn" class="recordBtn" onclick="recordAudio()" disabled>Record</button>
+            <button id="playBtn" class="playBtn"  disabled>Play</button>
+            <button id="recordBtn" class="recordBtn"  disabled>Record</button>
         </div>
         <span id="countdown" style="display: none;">5</span>
-
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
     <script src="animation.js"></script>
+    <script type="module" src="reveal.js"></script>
 </body>
 </html>
+
+
+
+
+
+

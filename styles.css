@@ -1,3 +1,4 @@
+
 .container {
     display: flex;
     flex-direction: column;
@@ -15,11 +16,12 @@
 }
 
 #combinedWords {
-    font-size: 3em; /* Adjust as needed */
-    margin-bottom: 10px;
+    font-size: 5vw; /* Adjust as needed */
     color: #2c3e50; /* Dark blue color */
     font-weight: bold;
 }
+
+
 
 .squares {
     display: flex;
@@ -50,7 +52,7 @@
     font-size: 1.5em;
     background-color: #3498db; /* Blue color */
     color: #fff; /* White text */
-    padding: 10px 20px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Hand cursor on hover */
@@ -85,7 +87,7 @@
     font-size: 1.5em;
     background-color: #e74c3c; /* Red color */
     color: #fff; /* White text */
-    padding: 10px 20px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Hand cursor on hover */
@@ -150,16 +152,51 @@
     top: 50%;
     left: 16%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 15vw;
 }
-.controls {
+
+#canvas3 {
     position: absolute;
-    z-index: 10;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    right: 5%;
+    transform: translate(0%, -60%);
+    width: 20vw;
+    height: 20vw;
 }
-.controls, select, option {
-    font-size: 25px;
+
+/* Base styles */
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow the items to wrap as needed */
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Space between buttons */
+}
+
+/* Styles for large screens (landscape mode) */
+@media screen and (min-width: 600px) { /* Adjust 600px as needed for your design */
+    .buttonContainer {
+        flex-direction: row; /* Align items horizontally */
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+
+    .buttonContainer > * {
+        flex: 1 0 10%; /* Each child takes up 50% of the width of the container */
+    }
+}
+
+/* Styles for small screens (landscape mode) */
+@media screen and (max-width: 599px) { /* Adjust 599px as needed for your design */
+    .buttonContainer {
+        flex-direction: row;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    .buttonContainer > * {
+        flex: 1 0 10%; /* Each child takes up 100% of the width of the container */
+    }
+}
+.buttonContainer select:first-child {
+    margin-right: 0px; /* Add 1px space to the right of the first <select> element */
 }

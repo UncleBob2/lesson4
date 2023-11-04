@@ -1,3 +1,5 @@
+import CanvasReveal from './reveal.js';
+
 // Initialize global variables
 let wordData = {};
 let mediaRecorder;
@@ -5,8 +7,9 @@ let audioChunks = [];
 let countdownInterval;
 let currentAudio;
 
-const RECORDING_TIME_IN_SECONDS = 8;
+const RECORDING_TIME_IN_SECONDS = 6;
 let playerState = 'idle';
+// Assuming CanvasReveal is a class or constructor function
 
 
 
@@ -27,7 +30,9 @@ const characterMapping = {
 }
     
 
+const canvasRevealInstance = new CanvasReveal(characterMapping, 'canvas3');
 // Event listener for when the DOM content has loaded
+
 document.addEventListener('DOMContentLoaded', async () => {
   // Initialize event listeners for permission modal buttons
   document.getElementById('allowBtn').addEventListener('click', handleAllowClick);
@@ -36,8 +41,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Add change event listeners to dropdowns to stop audio when a new character is selected
   document.getElementById('square1').addEventListener('change', stopAudio);
   document.getElementById('square2').addEventListener('change', stopAudio);
+  document.getElementById('square1').addEventListener('change', handleChange);
+  document.getElementById('square2').addEventListener('change', handleChange);
 
 
+
+  // Fetch word data and initialize the app
   try {
     const response = await fetch('file.json');
     if (!response.ok) {
@@ -54,7 +63,29 @@ document.addEventListener('DOMContentLoaded', async () => {
   initializeApp();
   checkCompletion(); // Ensure this is called after the DOM is ready
   animate(ctx);
+
+
+  // Add event listeners for each character
+  Object.keys(characterMapping).forEach(key => {
+    const elements = document.querySelectorAll(`[data-character="${key}"]`);
+    elements.forEach(element => {
+      element.addEventListener('click', () => {
+        canvasReveal.revealPiece(key);
+        if (canvasReveal.isComplete()) {
+          console.log('All pieces have been revealed!');
+          // You can add more actions here when the canvas is fully revealed.
+        }
+      });
+    });
+  });
+
 });
+
+// Function to handle changes in the dropdowns
+function handleChange() {
+  stopAudio(); // Stop the audio if it's playing
+  checkCompletion(); // Check if the word combination is complete and update UI accordingly
+}
 
 // Function to stop audio
 function stopAudio() {
@@ -116,25 +147,46 @@ function getSelectedValues() {
   };
 }
 
-// Check if the selected combination is complete and valid
+
 // Check if the selected combination is complete and valid
 function checkCompletion() {
+  // Get the selected values from the UI elements (likely dropdowns or similar controls)
   const selected = getSelectedValues();
+
+  // Find the words that start with the first selected value
   const selectedWords = characterMapping[selected.square1] || [];
+
+  // Among those words, find one that ends with the second selected value
   const selectedWord = selectedWords.find(word => word.endsWith(selected.square2));
+
+  // Check if both dropdowns have a value selected
   const isComplete = Object.values(selected).every(val => val);
 
+  // Get buttons to manage their state
   const playBtn = document.getElementById('playBtn');
   const recordBtn = document.getElementById('recordBtn');
 
+  // Buttons should be enabled only if there is a complete and valid word
   const shouldBeEnabled = isComplete && selectedWord;
   playBtn.disabled = !shouldBeEnabled;
   recordBtn.disabled = !shouldBeEnabled;
 
+  // If we have a valid word
   if (shouldBeEnabled) {
+    // Update the output (probably showing the word to the user)
     updateOutput(selectedWord);
-    updatePlayerState(getRandomState()); // Update to a random state
+
+    // Update the player state to a random state (details of this function are not shown here)
+    updatePlayerState(getRandomState());
+
+    // Check if canvasReveal is initialized and if so, call the update function
+    // Since you are using `canvasReveal && canvasReveal.update(...)`, it will only call update if // Call the update function on canvasRevealInstance with the selected squares
+    if (selectedWord) {
+      canvasRevealInstance.update(selectedWord);
+      console.log(`CanvasRevealInstance updated with word: ${selectedWord}`);
+    }
   } else {
+    // If the word is not valid, clear the output and set the player state to 'idle'
     clearOutput();
     updatePlayerState('idle');
   }
@@ -232,6 +284,9 @@ async function initializeRecording() {
 
 // Start recording audio
 async function startRecording() {
+    // Stop any audio that is currently playing
+  stopAudio();  // <-- Add this line to stop the audio when recording starts
+
   if (!mediaRecorder) {
     const isInitialized = await initializeRecording();
     if (!isInitialized) return;
@@ -285,3 +340,13 @@ async function recordAudio() {
   }
 }
 
+
+window.addEventListener('load', () => {
+  document.getElementById('square1').addEventListener('change', handleChange);
+  document.getElementById('square2').addEventListener('change', handleChange);
+  document.getElementById('square1').addEventListener('change', checkCompletion);
+  document.getElementById('square2').addEventListener('change', checkCompletion);
+  document.getElementById('playBtn').addEventListener('click', playAudio);
+  document.getElementById('recordBtn').addEventListener('click', recordAudio);
+
+});
