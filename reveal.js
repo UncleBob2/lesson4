@@ -6,7 +6,6 @@ class CanvasReveal {
       this.revealedPieces = new Set();
       this.totalPieces = 20;
       this.mappingToPieces = this.createMappingToPieces();
-      console.log(`Character mapping: ${JSON.stringify(this.characterMapping)}`);
         console.log(`Mapping to pieces: ${JSON.stringify(Array.from(this.mappingToPieces.entries()))}`);
 
       this.initCanvas();
@@ -34,7 +33,7 @@ class CanvasReveal {
       }
   
     initCanvas() {
-        console.log("Initializing canvas...");
+
 
       const canvas = document.getElementById(this.canvasId);
       this.ctx = canvas.getContext('2d');
@@ -54,7 +53,6 @@ class CanvasReveal {
       }
       
     loadImage() {
-        console.log("Loading image...");
       const image = new Image();
       image.src = 'image/award.jpg';
       image.onload = () => {
@@ -65,14 +63,12 @@ class CanvasReveal {
     }
   
     coverAllPieces() {
-    console.log("Covering all pieces...");
       for (let i = 1; i <= this.totalPieces; i++) {
         this.coverPiece(i);
       }
     }
   
     coverPiece(pieceIndex) {
-        console.log(`Covering piece ${pieceIndex}`);
       const row = Math.floor((pieceIndex - 1) / this.columns);
       const col = (pieceIndex - 1) % this.columns;
   
@@ -81,7 +77,6 @@ class CanvasReveal {
     }
   
     drawGridAndLabels() {
-        console.log("Drawing grid and labels...");
       for (let row = 0; row < this.rows; row++) {
         for (let col = 0; col < this.columns; col++) {
           const pieceIndex = row * this.columns + col + 1;
@@ -102,7 +97,6 @@ class CanvasReveal {
     
         //word = word.charAt(0).toUpperCase() + word.slice(1);
         word = word
-        console.log(`WholeWord_revealPiece: ${word} `);
         // Check if the word is in the mapping and if it has not already been revealed.
         const pieceIndex = this.mappingToPieces.get(word);
         if (pieceIndex && !this.revealedPieces.has(pieceIndex)) {
@@ -115,7 +109,6 @@ class CanvasReveal {
       }
     
       removeCover(pieceIndex) {
-        console.log(`Revealing piece ${pieceIndex}`);
         const row = Math.floor((pieceIndex - 1) / this.columns);
         const col = (pieceIndex - 1) % this.columns;
         
@@ -129,15 +122,15 @@ class CanvasReveal {
             // The arguments here are: image, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight
             this.ctx.drawImage(image, x, y, this.pieceWidth, this.pieceHeight, x, y, this.pieceWidth, this.pieceHeight);
         };
+        window.updateScore(1000);
         
-        console.log(`Piece ${pieceIndex} revealed at (x: ${x}, y: ${y}, width: ${this.pieceWidth}, height: ${this.pieceHeight})`);
+        //console.log(`Piece ${pieceIndex} revealed at (x: ${x}, y: ${y}, width: ${this.pieceWidth}, height: ${this.pieceHeight})`);
     }
     
       
       
     update(word) {
         // Ensure the word is correctly capitalized as the mapping keys seem case sensitive.
-        console.log(`WholeWord_update: ${word} `);
         word = word.charAt(0).toUpperCase() + word.slice(1);
         //word = word
         // Check if the word is in the class's mapping and if it has not already been revealed.
@@ -151,13 +144,13 @@ class CanvasReveal {
       
         // Check if all pieces have been revealed
         if (this.isComplete()) {
+            updateScore(10000000);
           // Handle game completion (e.g., display a message or trigger an event)
           console.log("All pieces have been revealed! Game complete!");
         }
       }
   
     isComplete() {
-        console.log("Checking if complete...");
       return this.revealedPieces.size === this.totalPieces;
     }
   }

@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #138b13; /* This sets the background color to green */
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  width: 100vw;
+}
+
+/* Added header-top-container for positioning combinedWords */
+.header-top-container {
+  position: relative;
+  width: 100%;
+}
+
+.header, .controller-section, .footer,.top-text {
+  width: 100%;
+}
+
+/* Added styles for combinedWords */
+#combinedWords {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  /* font-size: 2vw; Adjust as needed */
+  color: #2c3e50; /* Dark blue color */
+  font-size: 2.8vh; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+.header {
+  width: 100%;
+  position: relative; /* Add relative positioning */
+  /* Ensure there's enough height for the header to contain the combinedWords */
+  height: 150px; /* Adjust the height as needed */
+  display: flex;
+  align-items: flex-end; /* Align children to the bottom */
+  justify-content: center; /* Center children horizontally */
+  padding-bottom: 10px; /* Adjust as needed for spacing from the bottom */
+}
+
+
+
+/* Ensure that header and top-text are under combinedWords */
+.controller-section {
+  position: relative;
+  z-index: 1;
+}
+
+.footer .buttonContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Ensures it sits on top */
+  justify-content: center;
+  align-items: center;
+  gap: 2px; /* Space between buttons */
+  /* You may want to adjust the padding/margin as necessary for your layout */
+  bottom: 100px; 
+}
+
+
+
+.squares {
+  display: flex;
+  flex-wrap: wrap; /* Allows squares to wrap to next line if needed */
+  justify-content: center; /* Centers the squares in the container */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 3em;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px; /* Vertically centers the text in the square */
+  background-color: #ecf0f1; /* Light blue color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.square:hover {
+  transform: translateY(-5px); /* Slightly lifts the square on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Increased shadow on hover for depth */
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+}
+.sidebars, .main-image {
+  height: 47vw;
+}
+.sidebars {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+}
+.l-top-sidebar, .r-top-sidebar, .l-bot-sidebar, .r-bot-sidebar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-image {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#wordImage {
+  max-width: 100%; /* Ensures the image is fully contained within its flex-item */
+  max-height: 100%; /* Ensures the image is fully contained within its flex-item */
+  width: auto; /* Maintain the aspect ratio of the image */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+
+
+.flex-item {
+  border-radius: 10px; /* Rounded corners */
+  padding: 1px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  #9ac69a;
+}
+canvas {
+  border-radius: 10px; /* Rounded corners */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.score-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.score-label {
+  margin-top: 0;
+  padding-top: 10px;
+  font-size: 3vh;
+}
+#score {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  font-size: 3vh;
+}
+
+
+
+/* Ensure flex-container is relative for absolute positioning of children */
+.flex-container {
+  position: relative;
+  /* Existing styles */
+}
+
+
+.playBtn {
+  margin-top: 20px;
+  font-size: 1.5em;
+  background-color: #3498db; /* Blue color */
+  color: #fff; /* White text */
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.playBtn:hover {
+  background-color: #2980b9; /* Slightly darker blue on hover */
+  transform: translateY(-3px); /* Slightly lifts the button on hover */
+}
+
+.playBtn:disabled {
+  background-color: #bdc3c7; /* Gray color */
+  color: #7f8c8d; /* Darker gray text */
+  cursor: not-allowed; /* Not-allowed cursor to indicate that the button is disabled */
+  transform: none; /* Remove transform to negate any hover effects */
+}
+
+.playBtn:disabled:hover {
+  background-color: #bdc3c7; /* Keep the background color the same on hover */
+}
+
+
+.recordBtn {
+  margin-top: 20px;
+  font-size: 1.5em;
+  background-color: #e74c3c; /* Red color */
+  color: #fff; /* White text */
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.recordBtn:hover {
+  background-color: #c0392b; /* Slightly darker red on hover */
+  transform: translateY(-3px); /* Slightly lifts the button on hover */
+}
+
+.recordBtn:disabled {
+  background-color: #bdc3c7; /* Gray color */
+  color: #7f8c8d; /* Darker gray text */
+  cursor: not-allowed; /* Not-allowed cursor to indicate that the button is disabled */
+  transform: none; /* Remove transform to negate any hover effects */
+}
+
+.recordBtn:disabled:hover {
+  background-color: #bdc3c7; /* Keep the background color the same on hover */
+}
+#countdown {
+  font-size: 2em;
+  color: #e74c3c;
+  margin-left: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #2a2929;
+  width: 50%;
+  text-align: center;
+}
+
+.modal-content button {
+  margin: 10px;
+  color: black;
+}
+
+
+
+.modal-content button:hover {
+  background-color: #e0e0e0;
+}
+
+
+
+
+
+
+
+/* Media query for portrait mode */
+@media (max-width: 768px) { /* You can adjust this value based on your needs */
+  .buttonContainer {
+    flex-direction: row; /* All items in one row */
+    gap: 5px; /* Reduced gap */
+  }
+
+
+ /* If there is still too much space, you can adjust the flex-basis and max-width further */
+ .square {
+  flex-basis: 22%; /* Slightly less than 25% to account for the gap */
+  max-width: 22%; /* Slightly less than 25% to account for the gap */
+}
+
+.playBtn, .recordBtn {
+  flex-basis: auto; /* Allow the buttons to take the necessary space */
+  width: auto; /* Allow the buttons to take the necessary space */
+}
+}

@@ -6,6 +6,7 @@ let mediaRecorder;
 let audioChunks = [];
 let countdownInterval;
 let currentAudio;
+let score = 0;
 
 const RECORDING_TIME_IN_SECONDS = 6;
 let playerState = 'idle';
@@ -85,6 +86,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 function handleChange() {
   stopAudio(); // Stop the audio if it's playing
   checkCompletion(); // Check if the word combination is complete and update UI accordingly
+    // Update score based on the element id that triggered the change
+   window.updateScore(-50);
 }
 
 // Function to stop audio
@@ -95,6 +98,16 @@ function stopAudio() {
   }
 }
 
+// Function to update score
+window.updateScore = function(points) {
+  score += points;
+  
+  // Format the score with thousands separators
+  const formattedScore = new Intl.NumberFormat('en-US').format(score);
+  
+  // Update the score display with formatted score
+  document.getElementById('score').textContent = formattedScore;
+}
 function initializeApp() {
   const userChoice = localStorage.getItem('userChoice');
   if (userChoice === 'allowed') {
@@ -183,12 +196,15 @@ function checkCompletion() {
     // Since you are using `canvasReveal && canvasReveal.update(...)`, it will only call update if // Call the update function on canvasRevealInstance with the selected squares
     if (selectedWord) {
       canvasRevealInstance.update(selectedWord);
-      console.log(`CanvasRevealInstance updated with word: ${selectedWord}`);
-    }
-  } else {
+      if (canvasRevealInstance.isComplete()) {
+        window.updateScore(10000);
+          }
+    } 
+    else {
     // If the word is not valid, clear the output and set the player state to 'idle'
     clearOutput();
     updatePlayerState('idle');
+    }
   }
 }
 
@@ -220,7 +236,8 @@ function updatePlayerState(newState) {
 function updateOutput(selectedWord) {
   const wordInfo = wordData[selectedWord];
   if (wordInfo) {
-    document.getElementById('combinedWords').textContent = wordInfo.combinedWords;
+    // Use innerHTML and replace \n with <br> to render line breaks
+    document.getElementById('combinedWords').innerHTML = wordInfo.combinedWords.replace(/\n/g, '<br>');
     document.getElementById('wordImage').src = wordInfo.imagePath;
     document.getElementById('wordImage').alt = selectedWord;
     document.getElementById('playBtn').dataset.audioPath = wordInfo.audioPath;
@@ -231,7 +248,8 @@ function updateOutput(selectedWord) {
 
 // Clear output elements
 function clearOutput() {
-  document.getElementById('combinedWords').textContent = '';
+  // Use innerHTML to be consistent with updateOutput
+  document.getElementById('combinedWords').innerHTML = '';
   document.getElementById('wordImage').src = '';
   document.getElementById('wordImage').alt = '';
 }
@@ -240,6 +258,9 @@ function clearOutput() {
 function playAudio() {
   const playBtn = document.getElementById('playBtn');
   const audioPath = playBtn.dataset.audioPath;
+
+  // Disable the play button to prevent multiple clicks
+  playBtn.disabled = true;
 
   // Stop current audio if it's playing
   if (currentAudio && !currentAudio.paused) {
@@ -251,10 +272,22 @@ function playAudio() {
   if (audioPath) {
     currentAudio = new Audio(audioPath);
     currentAudio.play();
+
+    // Add an event listener to the 'ended' event
+    currentAudio.addEventListener('ended', function() {
+      // Update score only after the audio has finished playing
+      updateScore(500);
+
+      // Re-enable the play button after the audio has finished playing
+      playBtn.disabled = false;
+    });
   } else {
     alert('Audio file not found for the selected combination!');
+    // Re-enable the play button if there's an error
+    playBtn.disabled = false;
   }
 }
+
 
 // Initialize recording
 async function initializeRecording() {
@@ -272,6 +305,7 @@ async function initializeRecording() {
       const audio = new Audio(audioUrl);
       audio.play();
       audioChunks = [];
+      window.updateScore(500);
     };
 
     return true;

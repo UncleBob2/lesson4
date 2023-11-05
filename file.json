@@ -3,114 +3,114 @@
     "Bơi": {
       "audioPath": "audio/swimming.mp3",
       "imagePath": "image/swimming2.jpg",
-      "combinedWords": "Bơi lội: Swimming - Em rất thích bơi lội vào mùa hè."
+      "combinedWords": "Bơi lội: Swimming\n Em rất thích bơi lội vào mùa hè."
     },
 
     "Bởi": {
       "audioPath": "audio/because.mp3",
       "imagePath": "image/because.jpg",
-      "combinedWords": "Bởi vì: Because - Hôm nay em nghỉ học bởi vì em bị bệnh."
+      "combinedWords": "Bởi vì: Because \n Hôm nay em nghỉ học bởi vì em bị bệnh."
     },
 
     "Cỡi": {
-      "audioPath": "path/to/audio/coi_coi_noi.mp3",
+      "audioPath": "audio/horseriding.mp3",
       "imagePath": "image/horse_riding.jpg",
-      "combinedWords": "Cỡi ngựa: horse riding - Em thấy chú cảnh sát cởi ngựa trên phố."
+      "combinedWords": "Cỡi ngựa: horse riding\n Em thấy chú cảnh sát cởi ngựa trên phố."
     },
 
     "Cởi": {
-      "audioPath": "path/to/audio/coi_coi_giay.mp3",
+      "audioPath": "audio/removeshoes.mp3",
       "imagePath": "image/removeshoes.jpg",
-      "combinedWords": "Cởi giày: Remove shoes - Phải cởi giày khi vào nhà."
+      "combinedWords": "Cởi giày: Remove shoes\n Phải cởi giày khi vào nhà."
     },
     "Chơi": {
-      "audioPath": "path/to/audio/choi_choi_dua.mp3",
+      "audioPath": "audio/play.mp3",
       "imagePath": "image/kids_playing.jpg",
-      "combinedWords": "Chơi đùa: Play - các bạn nhỏ đang ngồi chơi đùa với nhau."
+      "combinedWords": "Chơi đùa: Play\n Các bạn nhỏ đang ngồi chơi đùa với nhau."
     },
 
     "Dơi": {
-      "audioPath": "path/to/audio/doi_con_doi.mp3",
+      "audioPath": "audio/bat.mp3",
       "imagePath": "image/bat.jpg",
-      "combinedWords": "Con dơi: Bat - Con dơi là loài động vật biết bay."
+      "combinedWords": "Con dơi: Bat\n Con dơi là loài động vật biết bay."
     },
     "Dời": {
-      "audioPath": "path/to/audio/doi_doi_nha.mp3",
+      "audioPath": "audio/moving.mp3",
       "imagePath": "image/moving.jpg",
-      "combinedWords": "Dời nhà: Move house - Gia đình em sẽ dời nhà vào tháng sau."
+      "combinedWords": "Dời nhà: Move house\n Gia đình em sẽ dời nhà vào tháng sau."
     },
     "Đời": {
-      "audioPath": "path/to/audio/doi_cuoc_doi.mp3",
+      "audioPath": "audio/life.mp3",
       "imagePath": "image/life.jpg",
-      "combinedWords": "Cuộc đời: Life - Mẹ đã dành cả cuộc đời của mình để chăm lo dạy dỗ con nên người."
+      "combinedWords": "Cuộc đời: Life\nMẹ đã dành cả cuộc đời của mình để chăm lo dạy dỗ con nên người."
     },
     "Đợi": {
-      "audioPath": "path/to/audio/doi_doi_cho.mp3",
+      "audioPath": "audio/wait.mp3",
       "imagePath": "image/wait.jpg",
-      "combinedWords": "Đợi chờ: Wait - chúng em đang chờ đợi xe bus."
+      "combinedWords": "Đợi chờ: Wait\nChúng em đang chờ đợi xe bus."
     },
     "Giới": {
-      "audioPath": "path/to/audio/gioi_gioi_thieu.mp3",
+      "audioPath": "audio/world.mp3",
       "imagePath": "image/everest.jpg",
-      "combinedWords": "Thế giới: World - Everest là ngọn núi cao nhất thế giới."
+      "combinedWords": "Thế giới: World\nEverest là ngọn núi cao nhất thế giới."
     },
 
 
     "Trời": {
-      "audioPath": "path/to/audio/khoi_khoi_nguon.mp3",
+      "audioPath": "audio/raining.mp3",
       "imagePath": "image/rainstorm.jpg",
-      "combinedWords": "Trời mưa: Raining - Không nên ra ngoài trời mưa."
+      "combinedWords": "Trời mưa: Raining\nKhông nên ra ngoài trời mưa."
     },
 
     "Khởi": {
-      "audioPath": "path/to/audio/khoi_khoi_hanh.mp3",
+      "audioPath": "audio/depart.mp3",
       "imagePath": "image/ycc_airplane.jpg",
-      "combinedWords": "Khởi hành: Depart - Máy bay sẽ khởi hành đi Toronto vào lúc 8 giờ tối nay."
+      "combinedWords": "Khởi hành: Depart\n Máy bay sẽ khởi hành đi Toronto vào lúc 8 giờ tối nay."
     },
 
     "Lời": {
-      "audioPath": "path/to/audio/loi_loi_noi.mp3",
+      "audioPath": "audio/words.mp3",
       "imagePath": "image/free_advice.jpg",
-      "combinedWords": "Lời nói: Words - Lời nói chẳng mất tiền mua lựa lời mà nói cho vừa lòng nhau."
+      "combinedWords": "Lời nói: Words\nLời nói chẳng mất tiền mua, lựa lời mà nói cho vừa lòng nhau."
     },
     "Lợi": {
-      "audioPath": "path/to/audio/loi_loi_ich.mp3",
+      "audioPath": "audio/benefit.mp3",
       "imagePath": "image/reading.jpg",
-      "combinedWords": "Lợi ích: Benefit - Thói quen đọc sách mỗi ngày sẽ đem lại nhiều lợi ích cho bạn."
+      "combinedWords": "Lợi ích: Benefit\nThói quen đọc sách mỗi ngày sẽ đem lại nhiều lợi ích cho bạn."
     },
     "Mới": {
-      "audioPath": "path/to/audio/moi_moi_me.mp3",
+      "audioPath": "audio/newbooks.mp3",
       "imagePath": "image/new_books.jpg",
-      "combinedWords": "Sách mới: new - Mẹ mua cho em sách mới vào đầu năm học."
+      "combinedWords": "Sách mới: New books\n Mẹ mua cho em sách mới vào đầu năm học."
     },
     "Mời": {
-      "audioPath": "path/to/audio/moi_moi_ban.mp3",
+      "audioPath": "audio/invite.mp3",
       "imagePath": "image/b_party.jpg",
-      "combinedWords": "Mời bạn: Invite friends - Em mời bạn đến nhà chơi vào dịp sinh nhật."
+      "combinedWords": "Mời bạn: Invite friends\n Em mời bạn đến nhà chơi vào dịp sinh nhật."
     },
 
 
     "Ngơi": {
-      "audioPath": "path/to/audio/ngoi_ngoi_nghi.mp3",
+      "audioPath": "audio/rest.mp3",
       "imagePath": "image/rest.png",
-      "combinedWords": "Nghỉ ngơi: Rest - Bạn nên nghỉ ngơi khi thấy mệt mỏi."
+      "combinedWords": "Nghỉ ngơi: Rest\n Bạn nên nghỉ ngơi khi thấy mệt mỏi."
     },
     "Ngợi": {
-      "audioPath": "path/to/audio/ngoi_ngoi_khen.mp3",
+      "audioPath": "audio/praise.mp3",
       "imagePath": "image/trophy.jpg",
-      "combinedWords": "Ngợi khen: Praise - Anh hai học  giỏi nên được ba mẹ khen ngợi."
+      "combinedWords": "Ngợi khen: Praise\n Anh hai học giỏi nên được ba mẹ khen ngợi."
     },
     "Rơi": {
-      "audioPath": "path/to/audio/roi_roi_rot.mp3",
+      "audioPath": "audio/falling.mp3",
       "imagePath": "image/fallingleaves.jpg",
-      "combinedWords": "Lá rơi: Drop/fall - Lá rơi rất nhiều vào mùa thu."
+      "combinedWords": "Lá rơi: Drop/fall\n Lá rơi rất nhiều vào mùa thu."
     },
 
 
     "Sợi": {
-      "audioPath": "path/to/audio/soi_soi_chi.mp3",
+      "audioPath": "audio/band.mp3",
       "imagePath": "image/necklace.jpg",
-      "combinedWords": "Sợi dây: band/cord - mẹ mua cho em sợi dây chuyền rất đẹp."
+      "combinedWords": "Sợi dây: Band/cord\n Mẹ mua cho em sợi dây chuyền rất đẹp."
     }
 
   }

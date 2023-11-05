@@ -1,68 +1,90 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Player</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Layout with CSS Flexbox</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="permissionModal" class="modal">
-        <div class="modal-content">
-            <p>For the best experience, please allow the website to access microphone and play sounds?</p>
-            <button id="allowBtn">Allow</button>
-            <button id="denyBtn">Deny</button>
+  <div id="permissionModal" class="modal">
+    <div class="modal-content">
+        <p>For the best experience, please allow the website to access microphone and play sounds?</p>
+        <button id="allowBtn">Allow</button>
+        <button id="denyBtn">Deny</button>
+    </div>
+  </div>
+<div class="flex-container">
+    <!-- The container for the header and top-text with combinedWords -->
+    <div class="header-top-container">
+      <div class="flex-item header">
+          <p id="combinedWords">Combined Words Content</p> <!-- Moved inside the header div -->
+      </div>
+  </div>
+
+    <div class="main-content">
+        <div class="sidebars">
+            <div class="flex-item l-top-sidebar">
+                <canvas id="canvas1"></canvas> <!-- Canvas for the left sidebar -->
+            </div>
+            <div class="flex-item l-bot-sidebar"></div>
+        </div>
+
+        <!-- Image in the main content area -->
+        <div class="flex-item main-image">
+            <img id="wordImage" src="" alt=""> <!-- Image element -->
+        </div>
+
+        <div class="sidebars">
+            <div class="flex-item r-top-sidebar">
+                <canvas id="canvas3"></canvas> <!-- Canvas for the right sidebar -->
+            </div>
+            <div class="flex-item r-bot-sidebar">
+                <div class="score-display"> <!-- Score display in the right sidebar bottom -->
+                    <p class="score-label">Points</p>
+                    <span id="score">0</span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="canvas-container">
-        <canvas id="canvas1"></canvas>
-        <canvas id="canvas3"></canvas>
+    <div class="controller-section">
     </div>
-    <div class="container">
-        <div class="output">
-            <p id="combinedWords"></p>
-            <img id="wordImage" src="" alt="" style="max-width: 35vw; max-height: 35vw;">
-        </div>
-        <!-- Combined controls and selects into buttonContainer -->
-        <div class="buttonContainer">
-            <!-- Removed squares div, selects go here -->
-            <select id="square1" class="square" >
-                <option value="b">b</option>
-                <option value="c">c</option>
-                <option value="ch">ch</option>
-                <option value="d">d</option>
-                <option value="đ">đ</option>
-                <option value="gi">gi</option>
-                <option value="kh">kh</option>
-                <option value="l">l</option>
-                <option value="m">m</option>
-                <option value="ng">ng</option>
-                <option value="r">r</option>
-                <option value="s">s</option>
-                <option value="tr">tr</option>           
-            </select>
-            <select id="square2" class="square" >
-                <option value="ơi">ơi</option>
-                <option value="ới">ới</option>
-                <option value="ời">ời</option>
-                <option value="ởi">ởi</option>
-                <option value="ỡi">ỡi</option>
-                <option value="ợi">ợi</option>
-            </select>
-            <button id="playBtn" class="playBtn"  disabled>Play</button>
-            <button id="recordBtn" class="recordBtn"  disabled>Record</button>
-        </div>
-        <span id="countdown" style="display: none;">5</span>
+            <!-- Combined controls and selects into buttonContainer -->
+            <div class="buttonContainer">
+              <!-- Removed squares div, selects go here -->
+              <select id="square1" class="square" >
+                  <option value="b">b</option>
+                  <option value="c">c</option>
+                  <option value="ch">ch</option>
+                  <option value="d">d</option>
+                  <option value="đ">đ</option>
+                  <option value="gi">gi</option>
+                  <option value="kh">kh</option>
+                  <option value="l">l</option>
+                  <option value="m">m</option>
+                  <option value="ng">ng</option>
+                  <option value="r">r</option>
+                  <option value="s">s</option>
+                  <option value="tr">tr</option>           
+              </select>
+              <select id="square2" class="square" >
+                  <option value="ơi">ơi</option>
+                  <option value="ới">ới</option>
+                  <option value="ời">ời</option>
+                  <option value="ởi">ởi</option>
+                  <option value="ỡi">ỡi</option>
+                  <option value="ợi">ợi</option>
+              </select>
+              <button id="playBtn" class="playBtn"  disabled>Play</button>
+              <button id="recordBtn" class="recordBtn"  disabled>Record</button>
+          </div>
+          <span id="countdown" style="display: none;">5</span>
+    <!-- <div class="flex-item footer"> -->
+      <div class="buttonContainer"></div>
     </div>
-    <script type="module" src="script.js"></script>
-    <script src="animation.js"></script>
-    <script type="module" src="reveal.js"></script>
+</div>
+<script type="module" src="script.js"></script>
+<script src="animation.js"></script>
+<script type="module" src="reveal.js"></script>
 </body>
 </html>
-
-
-
-
-
-

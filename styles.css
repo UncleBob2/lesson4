@@ -23,11 +23,6 @@
 
 
 
-.squares {
-    display: flex;
-    flex-wrap: wrap; /* Allows squares to wrap to next line if needed */
-    justify-content: center; /* Centers the squares in the container */
-}
 
 .square {
     width: 100px;
@@ -116,7 +111,7 @@
   }
   
 
-  .modal {
+.modal {
     display: none;
     position: fixed;
     left: 0;
@@ -165,6 +160,22 @@
     height: 20vw;
 }
 
+.score-label {
+    position: absolute;
+    top: 70%;
+    right: 5%; /* Adjust this value so it's to the left of the score */
+    font-size: 2em; /* Smaller font-size for the label */
+    font-weight: normal; /* Normal font-weight for the label */
+}
+
+#score {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
 /* Base styles */
 .buttonContainer {
     display: flex;
@@ -200,3 +211,4 @@
 .buttonContainer select:first-child {
     margin-right: 0px; /* Add 1px space to the right of the first <select> element */
 }
+
